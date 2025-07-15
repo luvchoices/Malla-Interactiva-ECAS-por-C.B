@@ -1,54 +1,35 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #fff;
+  background-color: #fffafc;
   padding: 20px;
-  margin: 0;
-  color: #333;
 }
 
 h1 {
-  text-align: center;
-  color: #d75d7f;
-  margin-bottom: 30px;
+  color: #cc6699;
 }
 
-.semester {
-  border: 2px solid #eee;
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 30px;
-  background-color: #fdf6f8;
-}
-
-.semester h2 {
-  color: #c04061;
-  margin-bottom: 10px;
-}
-
-.subject {
-  display: inline-block;
-  padding: 10px 15px;
-  margin: 5px;
-  background-color: #f9c7d1; /* rosado pastel */
-  border: 1px solid #ccc;
+.semestre {
+  border: 2px solid #cc6699;
+  padding: 10px;
+  margin-bottom: 20px;
   border-radius: 8px;
+}
+
+.ramo {
+  background-color: #ffd9e6;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: 0.3s;
 }
 
-.subject.approved {
-  background-color: #f48ca5; /* rosado fuerte */
+.ramo.aprobado {
+  background-color: #ff99cc !important;
 }
 
-.subject.locked {
-  background-color: #cccccc; /* gris bloqueado */
+.ramo.bloqueado {
+  background-color: #cccccc !important;
   cursor: not-allowed;
-  opacity: 0.6;
-}
-
-@media (max-width: 768px) {
-  .subject {
-    display: block;
-    width: 100%;
-  }
+  opacity: 0.7;
 }
