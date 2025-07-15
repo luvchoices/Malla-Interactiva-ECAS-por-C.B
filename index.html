@@ -1,35 +1,70 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <title>Malla Interactiva ECAS</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <h1>Malla Curricular Interactiva</h1>
+<!-- SEMESTRE I -->
+<div class="semester">
+  <h2>Semestre I</h2>
+  <div class="subject" data-name="FUNDAMENTOS DE LA EMPRESA" data-prerequisites="">FUNDAMENTOS DE LA EMPRESA</div>
+  <div class="subject" data-name="METODOLOGÍA DE LA INVESTIGACIÓN" data-prerequisites="">METODOLOGÍA DE LA INVESTIGACIÓN</div>
+  <div class="subject" data-name="HABILIDADES COMUNICACIONALES" data-prerequisites="">HABILIDADES COMUNICACIONALES</div>
+  <div class="subject" data-name="MATEMÁTICA APLICADA I" data-prerequisites="">MATEMÁTICA APLICADA I</div>
+  <div class="subject" data-name="INTRODUCCIÓN AL MEDIO Y ÉTICA PROFESIONAL" data-prerequisites="">INTRODUCCIÓN AL MEDIO Y ÉTICA PROFESIONAL</div>
+  <div class="subject" data-name="DERECHO I" data-prerequisites="">DERECHO I</div>
+</div>
 
-  <div class="semester">
-    <h2>Semestre I</h2>
-    <div class="subject" data-name="FUNDAMENTOS DE LA EMPRESA" data-prerequisites="">FUNDAMENTOS DE LA EMPRESA</div>
-    <div class="subject" data-name="METODOLOGÍA DE LA INVESTIGACIÓN" data-prerequisites="">METODOLOGÍA DE LA INVESTIGACIÓN</div>
-    <div class="subject" data-name="HABILIDADES COMUNICACIONALES" data-prerequisites="">HABILIDADES COMUNICACIONALES</div>
-    <div class="subject" data-name="MATEMÁTICA APLICADA I" data-prerequisites="">MATEMÁTICA APLICADA I</div>
-    <div class="subject" data-name="INTRODUCCIÓN AL MEDIO Y ÉTICA PROFESIONAL" data-prerequisites="">INTRODUCCIÓN AL MEDIO Y ÉTICA PROFESIONAL</div>
-    <div class="subject" data-name="DERECHO I" data-prerequisites="">DERECHO I</div>
-  </div>
+<!-- SEMESTRE II -->
+<div class="semester">
+  <h2>Semestre II</h2>
+  <div class="subject" data-name="CONTABILIDAD I" data-prerequisites="FUNDAMENTOS DE LA EMPRESA">CONTABILIDAD I</div>
+  <div class="subject" data-name="ADMINISTRACIÓN" data-prerequisites="FUNDAMENTOS DE LA EMPRESA">ADMINISTRACIÓN</div>
+  <div class="subject" data-name="MATEMÁTICA APLICADA II" data-prerequisites="MATEMÁTICA APLICADA I">MATEMÁTICA APLICADA II</div>
+  <div class="subject" data-name="TECNOLOGÍA DE LA INFORMACIÓN" data-prerequisites="MATEMÁTICA APLICADA I">TECNOLOGÍA DE LA INFORMACIÓN</div>
+  <div class="subject" data-name="DERECHO II" data-prerequisites="DERECHO I">DERECHO II</div>
+</div>
 
-  <div class="semester">
-    <h2>Semestre II</h2>
-    <div class="subject" data-name="CONTABILIDAD I" data-prerequisites="FUNDAMENTOS DE LA EMPRESA">CONTABILIDAD I</div>
-    <div class="subject" data-name="ADMINISTRACIÓN" data-prerequisites="FUNDAMENTOS DE LA EMPRESA">ADMINISTRACIÓN</div>
-    <div class="subject" data-name="MATEMÁTICA APLICADA II" data-prerequisites="MATEMÁTICA APLICADA I">MATEMÁTICA APLICADA II</div>
-    <div class="subject" data-name="TECNOLOGÍA DE LA INFORMACIÓN" data-prerequisites="MATEMÁTICA APLICADA I">TECNOLOGÍA DE LA INFORMACIÓN</div>
-    <div class="subject" data-name="DERECHO II" data-prerequisites="DERECHO I">DERECHO II</div>
-  </div>
+<!-- SEMESTRE III -->
+<div class="semester">
+  <h2>Semestre III</h2>
+  <div class="subject" data-name="CONTABILIDAD II" data-prerequisites="FUNDAMENTOS DE LA EMPRESA;CONTABILIDAD I">CONTABILIDAD II</div>
+  <div class="subject" data-name="GESTIÓN DE PERSONAS" data-prerequisites="FUNDAMENTOS DE LA EMPRESA;ADMINISTRACIÓN">GESTIÓN DE PERSONAS</div>
+  <div class="subject" data-name="MATEMÁTICA APLICADA III" data-prerequisites="MATEMÁTICA APLICADA I;MATEMÁTICA APLICADA II">MATEMÁTICA APLICADA III</div>
+  <div class="subject" data-name="INTRODUCCIÓN A LA ECONOMÍA Y FINANZAS" data-prerequisites="MATEMÁTICA APLICADA I;MATEMÁTICA APLICADA II">INTRODUCCIÓN A LA ECONOMÍA Y FINANZAS</div>
+  <div class="subject" data-name="SISTEMAS DE INFORMACIÓN ADMINISTRATIVA" data-prerequisites="MATEMÁTICA APLICADA I;TECNOLOGÍA DE LA INFORMACIÓN">SISTEMAS DE INFORMACIÓN ADMINISTRATIVA</div>
+  <div class="subject" data-name="TRIBUTACIÓN I" data-prerequisites="DERECHO I;DERECHO II">TRIBUTACIÓN I</div>
+</div>
 
-  <!-- Aquí irían los semestres III al VIII con todos sus ramos y prerrequisitos -->
-  
-  <script src="script.js"></script>
-</body>
-</html>
+<!-- SEMESTRE IV -->
+<div class="semester">
+  <h2>Semestre IV</h2>
+  <div class="subject" data-name="CONTABILIDAD III" data-prerequisites="FUNDAMENTOS DE LA EMPRESA;CONTABILIDAD I;CONTABILIDAD II">CONTABILIDAD III</div>
+  <div class="subject" data-name="COMERCIALIZACIÓN" data-prerequisites="FUNDAMENTOS DE LA EMPRESA;ADMINISTRACIÓN;GESTIÓN DE PERSONAS">COMERCIALIZACIÓN</div>
+  <div class="subject" data-name="ESTADÍSTICA" data-prerequisites="MATEMÁTICA APLICADA I;MATEMÁTICA APLICADA II;MATEMÁTICA APLICADA III">ESTADÍSTICA</div>
+  <div class="subject" data-name="ECONOMÍA" data-prerequisites="MATEMÁTICA APLICADA I;MATEMÁTICA APLICADA II;INTRODUCCIÓN A LA ECONOMÍA Y FINANZAS">ECONOMÍA</div>
+  <div class="subject" data-name="GESTIÓN Y ANÁLISIS DE DATOS" data-prerequisites="MATEMÁTICA APLICADA I;TECNOLOGÍA DE LA INFORMACIÓN;SISTEMAS DE INFORMACIÓN ADMINISTRATIVA">GESTIÓN Y ANÁLISIS DE DATOS</div>
+  <div class="subject" data-name="TRIBUTACIÓN II" data-prerequisites="DERECHO I;DERECHO II;TRIBUTACIÓN I">TRIBUTACIÓN II</div>
+</div>
 
+<!-- SEMESTRE V -->
+<div class="semester">
+  <h2>Semestre V</h2>
+  <div class="subject" data-name="CONTABILIDAD IV" data-prerequisites="FUNDAMENTOS DE LA EMPRESA;CONTABILIDAD I;CONTABILIDAD II;CONTABILIDAD III">CONTABILIDAD IV</div>
+  <div class="subject" data-name="COSTOS I" data-prerequisites="FUNDAMENTOS DE LA EMPRESA;CONTABILIDAD I;CONTABILIDAD II;CONTABILIDAD III">COSTOS I</div>
+  <div class="subject" data-name="AUDITORÍA I" data-prerequisites="FUNDAMENTOS DE LA EMPRESA;CONTABILIDAD I;CONTABILIDAD II;CONTABILIDAD III">AUDITORÍA I</div>
+  <div class="subject" data-name="FINANZAS I" data-prerequisites="MATEMÁTICA APLICADA I;MATEMÁTICA APLICADA II;INTRODUCCIÓN A LA ECONOMÍA Y FINANZAS">FINANZAS I</div>
+  <div class="subject" data-name="SEMINARIO DE INTEGRACIÓN" data-prerequisites="FUNDAMENTOS DE LA EMPRESA;CONTABILIDAD I;CONTABILIDAD II;CONTABILIDAD III;ADMINISTRACIÓN;GESTIÓN DE PERSONAS;DERECHO I;DERECHO II;TRIBUTACIÓN I;TRIBUTACIÓN II;MATEMÁTICA APLICADA I;MATEMÁTICA APLICADA II;INTRODUCCIÓN A LA ECONOMÍA Y FINANZAS">SEMINARIO DE INTEGRACIÓN</div>
+  <div class="subject" data-name="INGLÉS I" data-prerequisites="">INGLÉS I</div>
+</div>
+
+<!-- SEMESTRE VI -->
+<div class="semester">
+  <h2>Semestre VI</h2>
+  <div class="subject" data-name="CONTABILIDAD APLICADA" data-prerequisites="FUNDAMENTOS DE LA EMPRESA;CONTABILIDAD I;CONTABILIDAD II;CONTABILIDAD III;CONTABILIDAD IV">CONTABILIDAD APLICADA</div>
+  <div class="subject" data-name="COSTOS II" data-prerequisites="FUNDAMENTOS DE LA EMPRESA;CONTABILIDAD I;CONTABILIDAD II;CONTABILIDAD III;CONTABILIDAD IV;COSTOS I">COSTOS II</div>
+  <div class="subject" data-name="AUDITORÍA II" data-prerequisites="FUNDAMENTOS DE LA EMPRESA;CONTABILIDAD I;CONTABILIDAD II;CONTABILIDAD III;AUDITORÍA I">AUDITORÍA II</div>
+  <div class="subject" data-name="FINANZAS II" data-prerequisites="MATEMÁTICA APLICADA I;MATEMÁTICA APLICADA II;INTRODUCCIÓN A LA ECONOMÍA Y FINANZAS;FINANZAS I">FINANZAS II</div>
+  <div class="subject" data-name="EMPRENDIMIENTO E INNOVACIÓN" data-prerequisites="">EMPRENDIMIENTO E INNOVACIÓN</div>
+  <div class="subject" data-name="INGLÉS II" data-prerequisites="INGLÉS I">INGLÉS II</div>
+</div>
+
+<!-- SEMESTRE VII -->
+<div class="semester">
+  <h2>Semestre VII</h2>
+  <div class="subject" data-name="CONTROL DE GESTIÓN" data-prerequisites="FUNDAMENTOS DE LA EMPRESA;CONTABILIDAD I;CONTABILIDAD II;CONTABILIDAD III;CONTABILIDAD IV;CONTABILIDAD APLICADA">CONTROL DE GESTIÓN</div>
+  <div class="subject" data-name="AUDITORÍA III" data-prerequisites="FUNDAMENTOS DE LA EMPRESA;CONTABILIDAD I;CONTABILIDAD II;CONTABILIDAD III;AUD
