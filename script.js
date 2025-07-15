@@ -130,6 +130,6 @@ function toggleAprobado(el) {
       if (aprobados) {
         ramo.classList.remove("bloqueado");
       }
-});
+    });
   }
 }
