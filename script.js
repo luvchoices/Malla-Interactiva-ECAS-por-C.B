@@ -6,7 +6,6 @@
   <title>Malla Curricular Interactiva</title>
   <link rel="stylesheet" href="estilos.css" />
 </head>
-<script>
 <body>
   <h1>📘 Malla Curricular Interactiva</h1>
   <div id="contenedor-malla"></div>
@@ -133,15 +132,3 @@
       if (el.classList.contains("bloqueado")) return;
 
       el.classList.toggle("aprobado");
-            )
-      if (aprobados) {
-        ramo.classList.remove("bloqueado");
-      }
-    });
-  }
-}
-
-
-      const id = el.dataset.id;
-      if
-<script>
