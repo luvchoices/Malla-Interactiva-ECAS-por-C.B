@@ -133,6 +133,14 @@
       if (el.classList.contains("bloqueado")) return;
 
       el.classList.toggle("aprobado");
+            )
+      if (aprobados) {
+        ramo.classList.remove("bloqueado");
+      }
+    });
+  }
+}
+
 
       const id = el.dataset.id;
       if
