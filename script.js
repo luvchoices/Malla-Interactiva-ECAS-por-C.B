@@ -132,3 +132,16 @@
       if (el.classList.contains("bloqueado")) return;
 
       el.classList.toggle("aprobado");
+  const id = el.dataset.id;
+  if (id) {
+    document.querySelectorAll(".ramo[data-prereq]").forEach((ramo) => {
+      const prereqs = JSON.parse(ramo.dataset.prereq);
+      const aprobados = prereqs.every((p) =>
+        document.querySelector(`.ramo[data-id="${p}"]`)?.classList.contains("aprobado")
+      );
+      if (aprobados) {
+        ramo.classList.remove("bloqueado");
+      }
+    });
+  }
+}
