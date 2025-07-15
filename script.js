@@ -1,4 +1,4 @@
-<const malla = [
+const malla = [
   {
     semestre: "Semestre I",
     ramos: [
@@ -126,7 +126,7 @@ function toggleAprobado(el) {
       const prereqs = JSON.parse(ramo.dataset.prereq)
       const aprobados = prereqs.every((p) =>
         document.querySelector(`.ramo[data-id="${p}"]`)?.classList.contains("aprobado")
-      );
+      )
       if (aprobados) {
         ramo.classList.remove("bloqueado")
       }
