@@ -1,4 +1,4 @@
-const malla = [
+<const malla = [
   {
     semestre: "Semestre I",
     ramos: [
