@@ -1,3 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malla Curricular Interactiva</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <h1>📘 Malla Curricular Interactiva</h1>
+  <div id="contenedor-malla"></div>
+
+  <script>
+    const malla = [/* tu arreglo completo de semestres y ramos */];
+
+    const contenedor = document.getElementById("contenedor-malla");
+
+    malla.forEach((sem) => {
+      const bloque = document.createElement("div");
+      bloque.className = "semestre";
+      const titulo = document.createElement("h2");
+      titulo.textContent = sem.semestre;
+      bloque.appendChild(titulo);
+
+      sem.ramos.forEach((ramo) => {
+        const div = document.createElement("div");
+        div.className = "ramo";
+        div.textContent = ramo.nombre;
+
+        if (ramo.id) div.dataset.id = ramo.id;
+        if (ramo.prereq) {
+          div.dataset.prereq = JSON.stringify(ramo.prereq);
+          div.classList.add("bloqueado");
+        }
+
+        div.onclick = () => toggleAprobado(div);
+        bloque.appendChild(div);
+      });
+
+      contenedor.appendChild(bloque);
+    });
+
+    function toggleAprobado(el) {
+      if (el.classList.contains("bloqueado")) return;
+
+      el.classList.toggle("aprobado");
+
+      const id = el.dataset.id;
+      if (id) {
+        document.querySelectorAll(".ramo[data-prereq]").forEach((ramo) => {
+          const prereqs = JSON.parse(ramo.dataset.prereq);
+          const aprobados = prereqs.every((p) =>
+            document.querySelector(`.ramo[data-id="${p}"]`)?.classList.contains("aprobado")
+          );
+          if (aprobados) {
+            ramo.classList.remove("bloqueado");
+          }
+        });
+      }
+    }
+  </script>
+</body>
+</html>
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fff0f5;
