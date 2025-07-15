@@ -1,1 +1,274 @@
-
+{
+  "semestres": [
+    {
+      "nombre": "Semestre I",
+      "ramos": [
+        {
+          "nombre": "FUNDAMENTOS DE LA EMPRESA",
+          "codigo": "FUND_EMP",
+          "prerrequisitos": []
+        },
+        {
+          "nombre": "METODOLOGÍA DE LA INVESTIGACIÓN",
+          "codigo": "MET_INV",
+          "prerrequisitos": []
+        },
+        {
+          "nombre": "HABILIDADES COMUNICACIONALES",
+          "codigo": "HAB_COM",
+          "prerrequisitos": []
+        },
+        {
+          "nombre": "MATEMÁTICA APLICADA I",
+          "codigo": "MAT_I",
+          "prerrequisitos": []
+        },
+        {
+          "nombre": "INTRODUCIÓN AL MEDIO Y ÉTICA PROFESIONAL",
+          "codigo": "ETICA",
+          "prerrequisitos": []
+        },
+        {
+          "nombre": "DERECHO I",
+          "codigo": "DER_I",
+          "prerrequisitos": []
+        }
+      ]
+    },
+    {
+      "nombre": "Semestre II",
+      "ramos": [
+        {
+          "nombre": "CONTABILIDAD I",
+          "codigo": "CONT_I",
+          "prerrequisitos": [
+            "FUND_EMP"
+          ]
+        },
+        {
+          "nombre": "ADMINISTRACIÓN",
+          "codigo": "ADMIN",
+          "prerrequisitos": [
+            "FUND_EMP"
+          ]
+        },
+        {
+          "nombre": "MATEMÁTICA APLICADA II",
+          "codigo": "MAT_II",
+          "prerrequisitos": [
+            "MAT_I"
+          ]
+        },
+        {
+          "nombre": "TECNOLOGÍA DE LA INFORMACIÓN",
+          "codigo": "TEC_INFO",
+          "prerrequisitos": [
+            "MAT_I"
+          ]
+        },
+        {
+          "nombre": "DERECHO II",
+          "codigo": "DER_II",
+          "prerrequisitos": [
+            "DER_I"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Semestre III",
+      "ramos": [
+        {
+          "nombre": "CONTABILIDAD II",
+          "codigo": "CONT_II",
+          "prerrequisitos": [
+            "FUND_EMP",
+            "CONT_I"
+          ]
+        },
+        {
+          "nombre": "GESTIÓN DE PERSONAS",
+          "codigo": "GEST_PER",
+          "prerrequisitos": [
+            "FUND_EMP",
+            "ADMIN"
+          ]
+        },
+        {
+          "nombre": "MATEMÁTICA APLICADA III",
+          "codigo": "MAT_III",
+          "prerrequisitos": [
+            "MAT_I",
+            "MAT_II"
+          ]
+        },
+        {
+          "nombre": "INTRODUCCIÓN A LA ECONOMÍA Y FINANZAS",
+          "codigo": "ECO_FIN",
+          "prerrequisitos": [
+            "MAT_I",
+            "MAT_II"
+          ]
+        },
+        {
+          "nombre": "SISTEMAS DE INFORMACIÓN ADMINISTRATIVA",
+          "codigo": "SIS_INFO",
+          "prerrequisitos": [
+            "MAT_I",
+            "TEC_INFO"
+          ]
+        },
+        {
+          "nombre": "TRIBUTACIÓN I",
+          "codigo": "TRIB_I",
+          "prerrequisitos": [
+            "DER_I",
+            "DER_II"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Semestre IV",
+      "ramos": [
+        {
+          "nombre": "CONTABILIDAD III",
+          "codigo": "CONT_III",
+          "prerrequisitos": [
+            "FUND_EMP",
+            "CONT_I",
+            "CONT_II"
+          ]
+        },
+        {
+          "nombre": "COMERCIALIZACIÓN",
+          "codigo": "COMERC",
+          "prerrequisitos": [
+            "FUND_EMP",
+            "ADMIN",
+            "GEST_PER"
+          ]
+        },
+        {
+          "nombre": "ESTADÍSTICA",
+          "codigo": "EST",
+          "prerrequisitos": [
+            "MAT_I",
+            "MAT_II",
+            "MAT_III"
+          ]
+        },
+        {
+          "nombre": "ECONOMÍA",
+          "codigo": "ECO",
+          "prerrequisitos": [
+            "MAT_I",
+            "MAT_II",
+            "ECO_FIN"
+          ]
+        },
+        {
+          "nombre": "GESTIÓN Y ANÁLISIS DE DATOS",
+          "codigo": "GEST_DAT",
+          "prerrequisitos": [
+            "MAT_I",
+            "TEC_INFO",
+            "SIS_INFO"
+          ]
+        },
+        {
+          "nombre": "TRIBUTACIÓN II",
+          "codigo": "TRIB_II",
+          "prerrequisitos": [
+            "DER_I",
+            "DER_II",
+            "TRIB_I"
+          ]
+        }
+      ]
+    }
+  ],
+  "titulos": {
+    "contador_tecnico": {
+      "nombre": "CONTADOR TÉCNICO DE NIVEL SUPERIOR EN LA ECAS",
+      "ramos": [
+        "FUND_EMP",
+        "MET_INV",
+        "HAB_COM",
+        "MAT_I",
+        "ETICA",
+        "DER_I",
+        "CONT_I",
+        "ADMIN",
+        "MAT_II",
+        "TEC_INFO",
+        "DER_II",
+        "CONT_II",
+        "GEST_PER",
+        "MAT_III",
+        "ECO_FIN",
+        "SIS_INFO",
+        "TRIB_I",
+        "CONT_III",
+        "EST",
+        "ECO",
+        "TRIB_II",
+        "CONT_IV",
+        "COSTOS_I",
+        "ING_I"
+      ]
+    },
+    "contador_auditor": {
+      "nombre": "CONTADOR AUDITOR EN LA ECAS",
+      "ramos": [
+        "FUND_EMP",
+        "MET_INV",
+        "HAB_COM",
+        "MAT_I",
+        "ETICA",
+        "DER_I",
+        "CONT_I",
+        "ADMIN",
+        "MAT_II",
+        "TEC_INFO",
+        "DER_II",
+        "CONT_II",
+        "GEST_PER",
+        "MAT_III",
+        "ECO_FIN",
+        "SIS_INFO",
+        "TRIB_I",
+        "CONT_III",
+        "COMERC",
+        "EST",
+        "ECO",
+        "GEST_DAT",
+        "TRIB_II",
+        "CONT_IV",
+        "COSTOS_I",
+        "AUD_I",
+        "FIN_I",
+        "SEM_INT",
+        "ING_I",
+        "CONT_APLI",
+        "COSTOS_II",
+        "AUD_II",
+        "FIN_II",
+        "EMPREND",
+        "ING_II",
+        "CTRL_GEST",
+        "AUD_III",
+        "GEST_OP",
+        "FIN_III",
+        "AUD_TRIB",
+        "ING_III",
+        "AUD_GEST",
+        "ELECTIVO",
+        "SEM_INT_PROF",
+        "AUD_INFO",
+        "AUD_TRIB",
+        "ING_IV"
+      ]
+    }
+  }
+}
