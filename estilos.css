@@ -55,9 +55,9 @@ h1 {
 }
 
 .ramo.aprobado {
-  background-color: #fce4ec;
-  border-color: #e91e63;
-  color: #c2185b};
+  background-color: #fce4ec;   /* rosa pastel */
+  border-color: #e91e63;       /* fucsia encendido */
+  color: #c2185b;              /* fucsia oscuro en el texto */
   text-decoration: line-through;
 }
 
