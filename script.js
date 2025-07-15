@@ -120,22 +120,26 @@ function toggleAprobado(el) {
 
   el.classList.toggle("aprobado");
 
-  if (el.classList.contains("aprobado")) {
-    el.textContent = "💖 " + el.textContent;
-  } else {
-    el.textContent = el.textContent.replace("💖 ", "");
+  // 💾 Guardar o quitar del localStorage
+  const id = el.dataset.id;
+  if (id) {
+    let aprobados = JSON.parse(localStorage.getItem("ramosAprobados") || "[]");
+    if (el.classList.contains("aprobado")) {
+      if (!aprobados.includes(id)) aprobados.push(id);
+    } else {
+      aprobados = aprobados.filter((x) => x !== id);
+    }
+    localStorage.setItem("ramosAprobados", JSON.stringify(aprobados));
   }
 
-  const id = el.dataset.id;
+  // 🔓 Desbloquear ramos con prerrequisitos cumplidos
   if (id) {
     document.querySelectorAll(".ramo[data-prereq]").forEach((ramo) => {
       const prereqs = JSON.parse(ramo.dataset.prereq);
-      const aprobados = prereqs.every((p) =>
+      const desbloqueado = prereqs.every((p) =>
         document.querySelector(`.ramo[data-id="${p}"]`)?.classList.contains("aprobado")
       );
-      if (aprobados) {
-        ramo.classList.remove("bloqueado");
-      }
+      if (desbloqueado) ramo.classList.remove("bloqueado");
     });
   }
 }
