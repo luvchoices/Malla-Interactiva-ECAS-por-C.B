@@ -2,21 +2,51 @@ const malla = [
   {
     semestre: "Semestre I",
     ramos: [
-      { nombre: "Fundamentos de la Empresa", id: "fundamentos" },
-      { nombre: "Matemática Aplicada I", id: "mat1" },
-      { nombre: "Derecho I", id: "der1" }
+      { nombre: "Fundamentos de la Empresa", id: "r1" }
     ]
   },
   {
     semestre: "Semestre II",
     ramos: [
-      { nombre: "Contabilidad I", id: "cont1", prereq: ["fundamentos"] },
-      { nombre: "Administración", id: "admin", prereq: ["fundamentos"] },
-      { nombre: "Matemática Aplicada II", id: "mat2", prereq: ["mat1"] },
-      { nombre: "Derecho II", id: "der2", prereq: ["der1"] }
+      { nombre: "Contabilidad I", id: "r2", prereq: ["r1"] }
+    ]
+  },
+  {
+    semestre: "Semestre III",
+    ramos: [
+      { nombre: "Contabilidad II", id: "r3", prereq: ["r2"] }
+    ]
+  },
+  {
+    semestre: "Semestre IV",
+    ramos: [
+      { nombre: "Contabilidad III", id: "r4", prereq: ["r3"] }
+    ]
+  },
+  {
+    semestre: "Semestre V",
+    ramos: [
+      { nombre: "Costos I", id: "r5", prereq: ["r4"] }
+    ]
+  },
+  {
+    semestre: "Semestre VI",
+    ramos: [
+      { nombre: "Auditoría I", id: "r6", prereq: ["r5"] }
+    ]
+  },
+  {
+    semestre: "Semestre VII",
+    ramos: [
+      { nombre: "Auditoría II", id: "r7", prereq: ["r6"] }
+    ]
+  },
+  {
+    semestre: "Semestre VIII",
+    ramos: [
+      { nombre: "Seminario de Integración", id: "r8", prereq: ["r7"] }
     ]
   }
-  // Agrega más semestres aquí...
 ];
 
 const contenedor = document.getElementById("contenedor-malla");
@@ -50,7 +80,6 @@ malla.forEach((sem) => {
 // 💾 Restaurar aprobados desde localStorage
 const guardados = JSON.parse(localStorage.getItem("ramosAprobados") || "[]");
 
-// 🔄 Aplicar aprobados solo si cumplen prerrequisitos
 guardados.forEach((id) => {
   const ramo = document.querySelector(`.ramo[data-id="${id}"]`);
   if (ramo) {
@@ -103,3 +132,4 @@ function toggleAprobado(el) {
     else ramo.classList.add("bloqueado");
   });
 }
+
