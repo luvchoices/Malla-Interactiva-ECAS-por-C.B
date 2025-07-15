@@ -120,6 +120,12 @@ function toggleAprobado(el) {
 
   el.classList.toggle("aprobado");
 
+  if (el.classList.contains("aprobado")) {
+    el.textContent = "💖 " + el.textContent;
+  } else {
+    el.textContent = el.textContent.replace("💖 ", "");
+  }
+
   const id = el.dataset.id;
   if (id) {
     document.querySelectorAll(".ramo[data-prereq]").forEach((ramo) => {
