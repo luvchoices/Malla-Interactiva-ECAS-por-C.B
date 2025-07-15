@@ -1,58 +1,35 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #fff0f5;
-    padding: 20px;
-}
-h1 {
-    text-align: center;
-    color: #b30059;
-}
-#malla {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-.semestre {
-    border: 2px solid #b30059;
-    border-radius: 12px;
-    padding: 10px;
-    background-color: #fff;
-}
-.semestre h2 {
-    margin-top: 0;
-    color: #b30059;
-}
-.ramos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.ramo {
-    padding: 10px;
-    border-radius: 8px;
-    width: 200px;
-    text-align: center;
-    cursor: pointer;
-    user-select: none;
-    border: 2px solid #b30059;
-}
-.no_aprobado {
-    background-color: #ffe6f0;
-}
-.aprobado {
-    background-color: #ff99cc;
-}
-.bloqueado {
-    background-color: #ccc;
-    cursor: not-allowed;
-    opacity: 0.6;
-}
-#mensaje-final {
-    margin-top: 30px;
-    padding: 20px;
-    text-align: center;
-    font-size: 18px;
-    color: #006600;
-    font-weight: bold;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Malla Interactiva ECAS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Malla Curricular Interactiva</h1>
+
+  <div class="semester">
+    <h2>Semestre I</h2>
+    <div class="subject" data-name="FUNDAMENTOS DE LA EMPRESA" data-prerequisites="">FUNDAMENTOS DE LA EMPRESA</div>
+    <div class="subject" data-name="METODOLOGÍA DE LA INVESTIGACIÓN" data-prerequisites="">METODOLOGÍA DE LA INVESTIGACIÓN</div>
+    <div class="subject" data-name="HABILIDADES COMUNICACIONALES" data-prerequisites="">HABILIDADES COMUNICACIONALES</div>
+    <div class="subject" data-name="MATEMÁTICA APLICADA I" data-prerequisites="">MATEMÁTICA APLICADA I</div>
+    <div class="subject" data-name="INTRODUCCIÓN AL MEDIO Y ÉTICA PROFESIONAL" data-prerequisites="">INTRODUCCIÓN AL MEDIO Y ÉTICA PROFESIONAL</div>
+    <div class="subject" data-name="DERECHO I" data-prerequisites="">DERECHO I</div>
+  </div>
+
+  <div class="semester">
+    <h2>Semestre II</h2>
+    <div class="subject" data-name="CONTABILIDAD I" data-prerequisites="FUNDAMENTOS DE LA EMPRESA">CONTABILIDAD I</div>
+    <div class="subject" data-name="ADMINISTRACIÓN" data-prerequisites="FUNDAMENTOS DE LA EMPRESA">ADMINISTRACIÓN</div>
+    <div class="subject" data-name="MATEMÁTICA APLICADA II" data-prerequisites="MATEMÁTICA APLICADA I">MATEMÁTICA APLICADA II</div>
+    <div class="subject" data-name="TECNOLOGÍA DE LA INFORMACIÓN" data-prerequisites="MATEMÁTICA APLICADA I">TECNOLOGÍA DE LA INFORMACIÓN</div>
+    <div class="subject" data-name="DERECHO II" data-prerequisites="DERECHO I">DERECHO II</div>
+  </div>
+
+  <!-- Aquí irían los semestres III al VIII con todos sus ramos y prerrequisitos -->
+  
+  <script src="script.js"></script>
+</body>
+</html>
 
