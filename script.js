@@ -6,6 +6,7 @@
   <title>Malla Curricular Interactiva</title>
   <link rel="stylesheet" href="estilos.css" />
 </head>
+<script>
 <body>
   <h1>📘 Malla Curricular Interactiva</h1>
   <div id="contenedor-malla"></div>
@@ -135,3 +136,4 @@
 
       const id = el.dataset.id;
       if
+<script>
