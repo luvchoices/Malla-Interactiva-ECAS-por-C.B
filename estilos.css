@@ -1,138 +1,47 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Malla Curricular Interactiva</title>
-  <link rel="stylesheet" href="estilos.css" />
-</head>
-<body>
-  <h1>📘 Malla Curricular Interactiva</h1>
-  <div id="contenedor-malla"></div>
-
-  <script>
-    const malla = [/* tu arreglo completo de semestres y ramos */];
-
-    const contenedor = document.getElementById("contenedor-malla");
-
-    malla.forEach((sem) => {
-      const bloque = document.createElement("div");
-      bloque.className = "semestre";
-      const titulo = document.createElement("h2");
-      titulo.textContent = sem.semestre;
-      bloque.appendChild(titulo);
-
-      sem.ramos.forEach((ramo) => {
-        const div = document.createElement("div");
-        div.className = "ramo";
-        div.textContent = ramo.nombre;
-
-        if (ramo.id) div.dataset.id = ramo.id;
-        if (ramo.prereq) {
-          div.dataset.prereq = JSON.stringify(ramo.prereq);
-          div.classList.add("bloqueado");
-        }
-
-        div.onclick = () => toggleAprobado(div);
-        bloque.appendChild(div);
-      });
-
-      contenedor.appendChild(bloque);
-    });
-
-    function toggleAprobado(el) {
-      if (el.classList.contains("bloqueado")) return;
-
-      el.classList.toggle("aprobado");
-
-      const id = el.dataset.id;
-      if (id) {
-        document.querySelectorAll(".ramo[data-prereq]").forEach((ramo) => {
-          const prereqs = JSON.parse(ramo.dataset.prereq);
-          const aprobados = prereqs.every((p) =>
-            document.querySelector(`.ramo[data-id="${p}"]`)?.classList.contains("aprobado")
-          );
-          if (aprobados) {
-            ramo.classList.remove("bloqueado");
-          }
-        });
-      }
-    }
-  </script>
-</body>
-</html>
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff0f5;
-  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #ffeef2;
   margin: 0;
+  padding: 20px;
 }
 
 h1 {
-  color: #cc3366;
   text-align: center;
-  margin-bottom: 40px;
-}
-
-#contenedor-malla {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  gap: 20px;
-  padding-bottom: 10px;
-  scroll-snap-type: x mandatory;
+  color: #c2185b;
 }
 
 .semestre {
-  min-width: 280px;
-  background-color: #ffffff;
-  border: 2px solid #cc3366;
-  border-radius: 12px;
-  padding: 20px;
-  scroll-snap-align: start;
-  box-shadow: 0 4px 8px rgba(204, 51, 102, 0.2);
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fce4ec;
 }
 
-h2 {
+.semestre h2 {
   margin-top: 0;
-  font-size: 1.2em;
-  text-align: center;
-  color: #cc6699;
-  border-bottom: 1px solid #ffccdd;
-  padding-bottom: 5px;
+  color: #880e4f;
 }
 
 .ramo {
-  background-color: #ffd9e6;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 8px;
+  margin: 5px;
+  padding: 8px;
+  border: 1px solid #c2185b;
+  border-radius: 5px;
+  background-color: white;
   cursor: pointer;
-  transition: 0.3s ease;
-  font-size: 0.95em;
 }
 
 .ramo.aprobado {
-  background-color: #ff99cc !important;
+  background-color: #c8e6c9;
+  border-color: #388e3c;
+  color: #2e7d32;
   text-decoration: line-through;
 }
 
 .ramo.bloqueado {
-  background-color: #eeeeee !important;
+  background-color: #eeeeee;
+  border-color: #9e9e9e;
+  color: #9e9e9e;
   cursor: not-allowed;
-  opacity: 0.6;
 }
 
-#contenedor-malla::-webkit-scrollbar {
-  height: 8px;
-}
-
-#contenedor-malla::-webkit-scrollbar-track {
-  background: #ffe6f0;
-}
-
-#contenedor-malla::-webkit-scrollbar-thumb {
-  background: #cc6699;
-  border-radius: 5px;
-}
