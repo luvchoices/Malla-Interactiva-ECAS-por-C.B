@@ -67,9 +67,9 @@ const malla = [
   {
     semestre: "Semestre VII",
     ramos: [
-      { nombre: "Control de Gestión", prereq: ["fundamentos", "cont1", "cont2", "cont3", "cont4", "contap"] },
+      { nombre: "Control de Gestión", id: "control", prereq: ["fundamentos", "cont1", "cont2", "cont3", "cont4", "contap"] },
       { nombre: "Auditoría III", prereq: ["fundamentos", "cont1", "cont2", "cont3", "aud1", "aud2"] },
-      { nombre: "Gestión de Operaciones y Estrategia", prereq: ["fundamentos", "admin", "gestpers", "comerc"] },
+      { nombre: "Gestión de Operaciones y Estrategia", id: "estrategia", prereq: ["fundamentos", "admin", "gestpers", "comerc"] },
       { nombre: "Finanzas III", prereq: ["mat1", "mat2", "eco1", "fin1", "fin2"] },
       { nombre: "Tributación III", id: "trib3", prereq: ["der1", "der2", "trib1", "trib2"] },
       { nombre: "Inglés III", id: "eng3", prereq: ["eng1", "eng2"] }
@@ -88,7 +88,6 @@ const malla = [
   }
 ]
 
-// Renderizar la malla
 const contenedor = document.getElementById("contenedor-malla")
 
 malla.forEach((sem) => {
@@ -126,4 +125,11 @@ function toggleAprobado(el) {
     document.querySelectorAll(".ramo[data-prereq]").forEach((ramo) => {
       const prereqs = JSON.parse(ramo.dataset.prereq)
       const aprobados = prereqs.every((p) =>
-        document.querySelector(`.ramo[data-id="${p
+        document.querySelector(`.ramo[data-id="${p}"]`)?.classList.contains("aprobado")
+      )
+      if (aprobados) {
+        ramo.classList.remove("bloqueado")
+      }
+    })
+  }
+}
