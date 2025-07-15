@@ -7,26 +7,7 @@
 </head>
 <body>
   <h1>📘 Malla Curricular Interactiva</h1>
-
-  <div class="semestre" id="semestre1">
-    <h2>Semestre I</h2>
-    <div class="ramo" onclick="toggleAprobado(this)" data-id="fundamentos">Fundamentos de la Empresa</div>
-    <div class="ramo" onclick="toggleAprobado(this)">Metodología de la Investigación</div>
-    <div class="ramo" onclick="toggleAprobado(this)">Habilidades Comunicacionales</div>
-    <div class="ramo" onclick="toggleAprobado(this)" data-id="mat1">Matemática Aplicada I</div>
-    <div class="ramo" onclick="toggleAprobado(this)">Introducción al Medio y Ética Profesional</div>
-    <div class="ramo" onclick="toggleAprobado(this)" data-id="der1">Derecho I</div>
-  </div>
-
-  <div class="semestre" id="semestre2">
-    <h2>Semestre II</h2>
-    <div class="ramo bloqueado" data-prereq="fundamentos" onclick="toggleAprobado(this)">Contabilidad I</div>
-    <div class="ramo bloqueado" data-prereq="fundamentos" onclick="toggleAprobado(this)">Administración</div>
-    <div class="ramo bloqueado" data-prereq="mat1" onclick="toggleAprobado(this)">Matemática Aplicada II</div>
-    <div class="ramo bloqueado" data-prereq="mat1" onclick="toggleAprobado(this)">Tecnología de la Información</div>
-    <div class="ramo bloqueado" data-prereq="der1" onclick="toggleAprobado(this)">Derecho II</div>
-  </div>
-
+  <div id="contenedor-malla"></div>
   <script src="script.js"></script>
 </body>
 </html>
