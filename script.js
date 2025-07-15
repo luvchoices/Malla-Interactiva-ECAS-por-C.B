@@ -114,6 +114,26 @@ malla.forEach((sem) => {
 
   contenedor.appendChild(bloque);
 });
+// 📂 Al cargar, recuperar ramos aprobados
+const guardados = JSON.parse(localStorage.getItem("ramosAprobados") || "[]");
+
+guardados.forEach((id) => {
+  const ramo = document.querySelector(`.ramo[data-id="${id}"]`);
+  if (ramo) {
+    ramo.classList.remove("bloqueado"); // por si tenía prerrequisitos
+    ramo.classList.add("aprobado");
+    ramo.textContent = "💖 " + ramo.textContent;
+  }
+});
+
+// 🔓 Verificar desbloqueo por prerrequisitos
+document.querySelectorAll(".ramo[data-prereq]").forEach((ramo) => {
+  const prereqs = JSON.parse(ramo.dataset.prereq);
+  const desbloqueado = prereqs.every((p) =>
+    document.querySelector(`.ramo[data-id="${p}"]`)?.classList.contains("aprobado")
+  );
+  if (desbloqueado) ramo.classList.remove("bloqueado");
+});
 
 function toggleAprobado(el) {
   if (el.classList.contains("bloqueado")) return;
