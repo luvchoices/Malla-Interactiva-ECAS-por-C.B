@@ -1,58 +1,54 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fff0f5;
-    padding: 20px;
-}
-h1 {
-    text-align: center;
-    color: #b30059;
-}
-#malla {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-.semestre {
-    border: 2px solid #b30059;
-    border-radius: 12px;
-    padding: 10px;
-    background-color: #fff;
-}
-.semestre h2 {
-    margin-top: 0;
-    color: #b30059;
-}
-.ramos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.ramo {
-    padding: 10px;
-    border-radius: 8px;
-    width: 200px;
-    text-align: center;
-    cursor: pointer;
-    user-select: none;
-    border: 2px solid #b30059;
-}
-.no_aprobado {
-    background-color: #ffe6f0;
-}
-.aprobado {
-    background-color: #ff99cc;
-}
-.bloqueado {
-    background-color: #ccc;
-    cursor: not-allowed;
-    opacity: 0.6;
-}
-#mensaje-final {
-    margin-top: 30px;
-    padding: 20px;
-    text-align: center;
-    font-size: 18px;
-    color: #006600;
-    font-weight: bold;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  padding: 20px;
+  margin: 0;
+  color: #333;
 }
 
+h1 {
+  text-align: center;
+  color: #d75d7f;
+  margin-bottom: 30px;
+}
+
+.semester {
+  border: 2px solid #eee;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 30px;
+  background-color: #fdf6f8;
+}
+
+.semester h2 {
+  color: #c04061;
+  margin-bottom: 10px;
+}
+
+.subject {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #f9c7d1; /* rosado pastel */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subject.approved {
+  background-color: #f48ca5; /* rosado fuerte */
+}
+
+.subject.locked {
+  background-color: #cccccc; /* gris bloqueado */
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .subject {
+    display: block;
+    width: 100%;
+  }
+}
